@@ -198,7 +198,7 @@ p3
 
 ---
 .left-column[
-.footnote[McElreach (2020)]
+.footnote[McElreath (2020)]
 - Normal prior not necessary
 
 - In general, the posterior $P(H|data)$ is equal to
@@ -306,6 +306,7 @@ knitr::include_graphics("images/oecd-mvc-trends.png")
 
 
 ---
+.footnote[Source: [CDC](https://www.cdc.gov/transportationsafety/calculator/factsheet/seatbelt.html) Retreived 2021-04-09.]
 .pull-left[
 > ### The [Centers] for Disease Control and Prevention’s systematic review of 13 high-quality studies ([Shults et al., 2004]) found that primary laws increase belt use by about 14 percentage points and reduce occupant fatalities by about 8 percent compared to secondary laws.
 ]
