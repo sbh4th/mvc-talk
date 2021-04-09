@@ -32,11 +32,11 @@ class: center, top, inverse
 # .orange[**Outline**]
 
 .left[
-## .orange[**1  Orientation**]
-## .orange[**2  Background**]
-## .orange[**3  Methods**]
-## .orange[**4  Results**]
-## .orange[**5  Discussion**]
+## .orange[**Orientation**]
+## .orange[**Background**]
+## .orange[**Methods**]
+## .orange[**Results**]
+## .orange[**Discussion**]
 ]
 
 ---
@@ -44,11 +44,11 @@ class: center, top, inverse
 # .orange[**Outline**]
 
 .left[
-## .orange[**1  Orientation: Bayesian thinking**]
-## .gray[**2  Background: Seat belt laws**]
-## .gray[**3  Methods**]
-## .gray[**4  Results**]
-## .gray[**5  Discussion**]
+## .orange[**Orientation**]
+## .gray[**Background**]
+## .gray[**Methods**]
+## .gray[**Results**]
+## .gray[**Discussion**]
 ]
 
 ---
@@ -58,7 +58,7 @@ class: center, middle
 
 ---
 # Thought experiment
-.footnote[See Hamra et al. (2013) for intuitive description of Bayesian inference, which I modified to this example.]
+.footnote[See Hamra et al. (2013) for intuitive description of Bayesian inference, which I modified to this example. Image credit: [Government of Canada](https://www.canada.ca/en/services/policing/police/community-safety-policing/impaired-driving/drug-impaired-driving.html)]
 
 .pull-left[
 ## Suppose you are interested in the effect of exposure to cannabis on the risk of a motor vehicle crash in the next driving trip.
@@ -66,7 +66,6 @@ class: center, middle
 
 .pull-right[
 ![](images/cannabis-ca.png)
-Source: [Government of Canada](https://www.canada.ca/en/services/policing/police/community-safety-policing/impaired-driving/drug-impaired-driving.html)
 ]
 
 ---
@@ -75,7 +74,7 @@ Source: [Government of Canada](https://www.canada.ca/en/services/policing/police
 .pull-left[
 ### Describe your prior beliefs
 
-- Many studies have found excess risks for those consuming cannabis `\((X=1)\)` compared to those who don't `\((X=0)\)`
+- Many studies have found excess risks for those consuming cannabis `\((X=1)\)` compared to those who don't `\((X=0)\)`.
 
 - You think a harmful effect is likely and a protective effect unlikely.
 
@@ -95,17 +94,6 @@ Source: [Government of Canada](https://www.canada.ca/en/services/policing/police
 
 .footnote[*Prior mean = average of limits = (0 + .4)/2 = 0.20; prior SD = width of interval divided by width of SD units = (|0 - 0.4| / (2x1.96)) = 0.1.]
 
----
-## Simple example of Bayes' theorem
-
-|**Prior probability**               |     |     |  
-| :------------------------------------| :---:| :---: |  
-| Initial estimate of how likely is X causes Y | `\(x\)` | 20%    |  
-| **A New Event Occurs: Your study**         |     |     |
-| Probability of x conditional on H | `\(y\)` | 20% |  
-| Probability of x conditional on not H | `\(z\)` | 10% |  
-| **Posterior Probability**   |   |     |    
-| New estimate of how likely H is to be true given X | `\(\frac{xy}{xy+z(1-x)}\)` | 29% |  
 
 ---
 ## Visualizing prior information
@@ -135,15 +123,15 @@ Source: [Government of Canada](https://www.canada.ca/en/services/policing/police
 ![](images/driving-sim.png)
 ]
 
-.footnote[Source: [Toronto Star](https://www.thestar.com/news/gta/2015/11/26/clinical-study-at-camh-tests-how-cannabis-affects-volunteers-driving-skills.html) 2015-11-26.]
+.footnote[Image credit: [Toronto Star](https://www.thestar.com/news/gta/2015/11/26/clinical-study-at-camh-tests-how-cannabis-affects-volunteers-driving-skills.html) 2015-11-26.]
 
 
 ---
 ## Adding the likelihood based on observed data
 .left-column[
-- Plot of the likelihood based on observed data
+- Plot of the likelihood based on observed data.
 
-- Note the peak of the blue curve is the maximum likelihood estimate of 0.10.
+- Note the peak of the blue curve is the maximum likelihood estimate of RD=0.10.
 ]
 .right-column[
 .center[
@@ -157,7 +145,7 @@ Source: [Government of Canada](https://www.canada.ca/en/services/policing/police
 
 
 - Can combine these two pieces of evidence, since both come from normal distributions.
-- Inverse-weighting to reflect the amount of *information* given by the prior and likelihood.
+- Inverse-variance weighting to reflect the amount of *information* given by the prior and likelihood.
 - Produces a summary estimate.
 
 .center[
@@ -169,13 +157,31 @@ Source: [Government of Canada](https://www.canada.ca/en/services/policing/police
 .left-column[
 - Product of the prior probability and the information in the likelihood.
 
-- Revised estimate of the probability that cannabis affects crash probability.
+- Revised estimate of the probability that cannabis affects crash risk.
 ]
 .right-column[
 .center[
 &lt;img src="harper-upenn-2021-04-09_files/figure-html/p3-1.png" width="80%" /&gt;
 
 ]]
+
+---
+## Interpretation
+
+.pull-left[
+### Frequentist inference
+- No probability statements about hypothesis of interest.
+- p-value gives evidence of compatibility of observed data with the null, given the model and assuming the null hypothesis is true.
+- 95%CI: If we took a large number of repeated samples and computed the 95% CI each time, then 95% of these intervals would contain the true parameter. 
+]
+
+.pull-right[
+### Bayesian inference:
+- Direct statements about probability of hypothesis from the posterior distribution.
+- Can say 95% probability that parameter is within the limits of the interval.
+- Is a learning process and is updated with new information.
+- But priors require subjectivity...
+]
 
 ---
 ## Summary
@@ -195,11 +201,11 @@ class: center, top, inverse
 # .orange[**Outline**]
 
 .left[
-## .gray[**1  Orientation**]
-## .orange[**2  Background**]
-## .gray[**3  Methods**]
-## .gray[**4  Results**]
-## .gray[**5  Discussion**]
+## .gray[**Orientation**]
+## .orange[**Background**]
+## .gray[**Methods**]
+## .gray[**Results**]
+## .gray[**Discussion**]
 ]
 
 
@@ -207,11 +213,14 @@ class: center, top, inverse
 class: center, middle
 # Background
 ## Context of seat belts and motor vehicle crash deaths
+
 ---
 .left-column[
 - Important declines in motor vehicle crash deaths.
 
-- US lags behind other countries.
+- Many factors contributing to declines.
+
+- Yet, US lags behind other countries.
 
 - Pace of decline in US has slowed.
 ]
@@ -239,16 +248,6 @@ class: center, middle
 ]
 
 ---
-.left-column[
-Current laws in existence in 2017
-]
-
-.right-column[
-![](images/laws-2017.png)
-.footnote[Source: Insurance Institute for Highway Safety]
-]
-
----
 .footnote[Pew Trusts, Stateline, April 28, 2017. http://bit.ly/2pFTFPp]
 .center[
 ![:scale 70%](images/bergal-collated.png)
@@ -259,6 +258,21 @@ Current laws in existence in 2017
 .pull-left[
 &gt; ### The [Centers] for Disease Control and Prevention’s systematic review of 13 high-quality studies ([Shults et al., 2004]) found that primary laws increase belt use by about 14 percentage points and reduce occupant fatalities by about 8 percent compared to secondary laws.
 ]
+
+.pull-right[
+![:scale 80%](images/cdc-mvscc.png)
+]
+
+---
+.left-column[
+Current laws in existence in 2017
+]
+
+.right-column[
+![](images/laws-2017.png)
+.footnote[Source: Insurance Institute for Highway Safety]
+]
+
 ---
 class: center, middle, inverse
 
@@ -278,7 +292,7 @@ background-size: cover
 ### Hang on...
 
 .pull-left[
-&gt; CDOT should be concerned with building and maintaining our roads.Not joining the nanny crowd trying to protect us from our own bad decisions.
+&gt; CDOT should be concerned with building and maintaining our roads. Not joining the nanny crowd trying to protect us from our own bad decisions.
 
 &gt; Darwinism exists for a reason. If people want to meet their windshields at 60 miles and hour and remove themselves from the gene pool, that might be good for us in the long run.
 
@@ -309,7 +323,7 @@ background-size: cover
   
 - 16 states have upgraded to primary since 2000.
 
-- Concerns about unintended consequences
+- Concerns about unintended consequences.
 ]
 
 --
@@ -357,8 +371,9 @@ Our aims:
 --
 
 .pull-right[
--   Bayesian inference explicitly incorporates prior information to
-    estimate the posterior probability distribution:
+- Use priors to encode existing information.
+
+- Bayesian inference explicitly incorporates prior information to estimate the posterior probability distribution:
 
 `$$\underbrace{P(\theta|D)}_{\textrm{posterior}}\propto\underbrace{P(D|\theta)}_{\textrm{ likelihood }}\times\underbrace{P(\theta)}_{\textrm{prior}}$$`
 ]
@@ -380,18 +395,6 @@ class: center, middle
 - Prediction interval for new trial: (-1.97, 0.94). `\(\rightsquigarrow\)` .red[(-6000, +3000 deaths/yr).]
 - On relative scale `\(RR=0.95\)`, `\(95\%CI=0.83,1.09\)`
 
----
-### Prior empirical evidence on upgrades to primary enforcement
-
-- 6 moderate-quality studies on proportion belted
-- Average estimate: 0.13 (0.10, 0.16). `\(\rightsquigarrow\)` .red[13 percentage points.]
-- Prediction interval for new "trial": (0.03, 0.23).
-- On relative scale `\(RR=1.3\)`, `\(95\%CI=1.08,1.58\)`
-
-.center[
-![:scale 90%](images/meta-pb.png)
-]
-.footnote[Hedlund et al. (2008). Estimates from random effects meta-analysis.]
 
 ---
 ### Prior empirical evidence on upgrades to primary enforcement
@@ -419,11 +422,17 @@ class: center, top, inverse
 # .orange[**Outline**]
 
 .left[
-## .gray[**1  Background**]
-## .orange[**2  Methods**]
-## .gray[**3  Results**]
-## .gray[**4 Discussion**]
+## .gray[**Orientation**]
+## .gray[**Background**]
+## .orange[**Methods**]
+## .gray[**Results**]
+## .gray[**Discussion**]
 ]
+
+---
+class: center, middle
+# Methods
+## Design and analysis
 
 
 ---
@@ -470,7 +479,7 @@ How to execute:
 
 ---
 ## How do we augment the observed data?
-.footnote[Higgins &amp; Spiegelhalter (2000); Greenland (2007,2008)]
+.footnote[*Higgins &amp; Spiegelhalter (2000); Greenland (2007,2008). Check these numbers yourself in Stata by typing `csi 4 4 99996 99996`]
 
 - One way to think about priors is as bets on the "true" effect.
 - Suppose we were 95% sure the true `\(RR\)` is between (0.25, 4).
@@ -487,7 +496,7 @@ How to execute:
 - Literally.
 
 ---
-## Construction of priors ("semi-Bayes")
+## Construction of priors
 .footnote[*NHTSA, Primary Enforcement Saves Lives (2006); CDC, Motor Vehicle Prioritizing Interventions.]
 
 - Specify prior interval for the `\(RR\)` (effect of law), translated into mean and
@@ -496,11 +505,11 @@ How to execute:
 --
 
 3 sets of priors:
-1.  **Non-informative**: similar to frequentist assumptions.
+1.  **Non-informative**: similar to frequentist assumptions. `\(\rightsquigarrow N(ln(1),100)\)`
 
 2.  **Empirical**: prediction interval from prior meta-analysis.
-    -   MVC: 95% bet true `\(RR\)` between 0.83, 1.09 `\(\rightsquigarrow N(ln(0.95),0.005)\)`
-    -   %belted: 95% bet true `\(RR\)` between 1.08, 1.58 `\(\rightsquigarrow N(ln(1.30),0.009)\)`
+    -   MVC: 95% bet that true `\(RR\)` between 0.83, 1.09 `\(\rightsquigarrow N(ln(0.95),0.005)\)`
+    -   %belted: 95% bet that true `\(RR\)` between 1.08, 1.58 `\(\rightsquigarrow N(ln(1.30),0.009)\)`
     
 3.  **Subjective**: from existing policy documents.*
   - Estimate 7-8% reduction on fatalities, 12 to 18 percentage points on seat belt use.
@@ -521,29 +530,26 @@ How to execute:
 ---
 ## Data
 
--   Person-level FARS data on fatal crashes and vehicle miles traveled (VMT)
-    from the Fatal Analysis Reporting System (FARS), 2000-2016.
+- Person-level FARS data on fatal crashes and vehicle miles traveled (VMT) from the Fatal Analysis Reporting System (FARS), 2000-2016.
 
-  - Aggregate to 10 ages, 50 states, 17 years (n=8500, `\(\sim\)` 400k deaths).
+- Dates of primary enforcement upgrades in each state.
 
--   Dates of primary enforcement upgrades.
+- Other time-varying state policies:
+  - Speed limits;
+  - Graduated driver's license programs;
+  - Blood alcohol content laws.
 
--   Other time-varying state policies:
-    -   Speed limits;
-    -   Graduated driver's license programs;
-    -   Blood alcohol content laws.
-
--   Other time-varying state covariates:
-    -   Police per capita;
-    -   Per capita alcohol consumption;
-    -   Median income.
+-  Other time-varying state covariates:  
+  - Police per capita;
+  - Per capita alcohol consumption;
+  -  Median income.
 
 ---
 ### Data structure (10 ages x 50 states x 17 years ~ n=8500)
 ![](images/data-structure.png)
 
 ---
-### How do we add the prior? (subjective version)
+### How do we add the prior? (empirical version)
 - First define the mean and variance for the prior  
 ```stata
 set obs 1        // only adding 1 record for 1 parameter
@@ -555,15 +561,15 @@ gen s = 25       // scaling factor
 --
 
 - Next set a variable representing number of prior cases, based on the variance 
-of the prior and the scaling factor (if using). 
+of the prior and the scaling factor to facilitate normality (if using). 
 ```stata
-gen a = round(25^2 / 0.005,0)
+gen a = round(25^2 / 0.005,0) // num of prior cases
 gen c = 0 // set constant to 0 for prior records, 1 for actual data
 ```
 
 ---
 
-- Now set a variable for which prior is constructed to 1 for the covariate of interest, as well as equivalent person-time based on prior. Save as dataset.
+- Now set a variable for which prior is constructed to 1 for the covariate of interest, as well as equivalent person-time based on prior. Save as a dataset.
 ```stata
 gen cov = 1 / 25
 gen pt = a / exp(-0.95 / 25) // person-time for prior record
@@ -648,8 +654,16 @@ where:
 - Reporting marginal effects on probability scale
 
 ---
-class: center, middle, inverse
-# .orange[**Results**]
+class: center, top, inverse
+# .orange[**Outline**]
+
+.left[
+## .gray[**Orientation**]
+## .gray[**Background**]
+## .gray[**Methods**]
+## .orange[**Results**]
+## .gray[**Discussion**]
+]
 
 
 ---
@@ -721,7 +735,11 @@ Posterior distribution
 ![](images/t3.png)
 
 ---
-Sensitivity analysis with subjective priors
+## Results for proportion belted
+![](images/t4.png)
+
+---
+Sensitivity analysis with subjective priors (95% CIs)
 .center[
 ![:scale 75%](images/rdplot-sens.png)
 ]
@@ -743,7 +761,7 @@ Sensitivity analysis with subjective priors
 .left-column[
 `\(P(\beta&lt;-0.05 | \theta)=0.04\)`
 
-or
+or &lt; -0.03?
 
 `\(P(\beta&lt;-0.03 | \theta)=0.87\)`
 
@@ -756,8 +774,16 @@ These statements are impossible with frequentist inference.
 ]]
 
 ---
-class: center, middle, inverse
-# .orange[**Discussion**]
+class: center, top, inverse
+# .orange[**Outline**]
+
+.left[
+## .gray[**Orientation**]
+## .gray[**Background**]
+## .gray[**Methods**]
+## .gray[**Results**]
+## .orange[**Discussion**]
+]
 
 ---
 class: center, middle
@@ -819,6 +845,11 @@ class: center, middle
 ![](images/fig1.png)
 ]
 
+---
+Some recent evidence for unintended consequences
+.center[
+![:scale 80%](images/riddell-2019.png)
+]
 
 ---
 ## Conclusions
@@ -834,7 +865,7 @@ class: center, middle
 ]
 
 ---
-### Reproducible materials
+### Reproducible materials (including these slides)
 ![](images/osf-pic.png)
 
 ---
